@@ -1,0 +1,47 @@
+#footer{
+    background-color: $bck-color;
+    padding: 10px 0;
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 10px;
+        .contacts{
+            grid-column-end: span 3;
+            .logo{
+                padding: 10px 0 20px 0;
+            }
+            .contact{
+                display: flex;
+                column-gap: 5px;
+                padding: 5px;
+            }
+            .mail{
+                display: flex;
+                column-gap: 5px;
+                padding: 5px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            .location{
+                display: flex;
+                column-gap: 5px;
+                padding: 5px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+        .links{
+            grid-column-end: span 3;
+        }
+        .about{
+            grid-column-end: span 3;
+        }
+        .newsletter{
+            grid-column-end: span 3;
+        }
+    }
+}

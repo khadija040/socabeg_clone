@@ -1,0 +1,85 @@
+.metiers-section {
+    background-color: $bck-color;
+    padding: 50px 0;
+
+    .entete {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+
+        h4 {
+            font-size: 24px;
+            font-weight: 800;
+            margin: 0;
+            padding-bottom: 5px;
+        }
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 20px;
+        .metiers {
+            grid-column-end: span 3;
+            padding-top: 30px;
+            .image{
+                img{
+                    width: 100%;
+                }
+            }
+            .metier {
+                font-size: 18px;
+                font-weight: bold;
+                color: $second-color;
+                a{
+                    text-decoration: none;
+                    color: $second-color;
+                }
+                h5 {
+                    margin: 0;
+                }
+            }
+
+            .details {
+                a {
+                    text-decoration: none;
+                    color: $p-color;
+                    font-size: 12px;
+                    font-weight: 600;
+                    &:hover{
+                        color: $first-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 769px) {
+    .metiers-section {
+        .content {
+            .metiers {
+                grid-column-end: span 6;
+                .metier {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $second-color;
+    
+                    h5 {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 475px) {
+    .metiers-section {
+        .content {
+            .metiers {
+                grid-column-end: span 12;
+            }
+        }
+    }
+}

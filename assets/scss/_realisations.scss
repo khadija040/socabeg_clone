@@ -1,0 +1,123 @@
+#realisations {
+    padding: 50px 0;
+
+    .realisations {
+        .entete {
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+
+            .section-title {
+                h4 {
+                    font-size: 24px;
+                    font-weight: 800;
+                    margin: 0;
+                    padding-bottom: 5px;
+                }
+            }
+        }
+
+        .projets {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            column-gap: 20px;
+            row-gap: 20px;
+            .realisation {
+                grid-column-end: span 4;
+                padding-bottom: 30px;
+                background-color: $bck-color;
+                .image {
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .nom {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $second-color;
+
+                    a {
+                        text-decoration: none;
+                        color: $second-color;
+                    }
+
+                    h5 {
+                        margin: 0;
+                    }
+                }
+
+                .details {
+                    a {
+                        text-decoration: none;
+                        color: $first-color;
+                        font-size: 12px;
+                        font-weight: 600;
+
+                        &:hover {
+                            color: $second-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .detail {
+        display: flex;
+        justify-content: center;
+        padding: 50px 0;
+
+        button {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            color: $second-color;
+            border: 1px solid $bck-color;
+            cursor: pointer;
+            .btn{
+                font-size: 14px;
+                font-weight: 600;
+            }
+            &:hover {
+                color: $first-color;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 769px) {
+    #realisations {
+        .realisations {
+            .projets {
+                .realisation {
+                    grid-column-end: span 6;
+                    background-color: $bck-color;
+                    .nom {
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: $second-color;
+
+                        h5 {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 475px) {
+    #realisations {
+        .realisations {
+            .projets {
+                .realisation {
+                    grid-column-end: span 12;
+                    background-color: $bck-color;
+                }
+            }
+        }
+    }
+}
