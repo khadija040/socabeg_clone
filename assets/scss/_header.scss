@@ -65,3 +65,29 @@ header{
         }
     }
 }
+@media screen and (min-width : 769px) and (max-width : 900px)  {
+    header{
+        .navbar{
+            .navbar-menu{
+                display: flex;
+                flex-direction: row-reverse;
+                column-gap: 5px;
+            }
+            .menu{
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: flex-end;
+                .open_sidebar_btn{
+                    display: block;
+                    padding: 20px;
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+                .menu-text{
+                    display: none;
+                }
+            }
+        }
+    }
+}

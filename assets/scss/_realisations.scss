@@ -1,11 +1,12 @@
 #realisations {
-    padding: 50px 0;
+    padding: 100px 0;
 
     .realisations {
         .entete {
             display: flex;
             align-items: center;
             column-gap: 5px;
+            margin-bottom: 30px;
 
             .section-title {
                 h4 {
@@ -22,40 +23,44 @@
             grid-template-columns: repeat(12, 1fr);
             column-gap: 20px;
             row-gap: 20px;
+
             .realisation {
                 grid-column-end: span 4;
-                padding-bottom: 30px;
                 background-color: $bck-color;
+
                 .image {
                     img {
                         width: 100%;
                     }
                 }
 
-                .nom {
-                    font-size: 18px;
-                    font-weight: bold;
-                    color: $second-color;
-
-                    a {
-                        text-decoration: none;
+                .sous-titre {
+                    padding: 20px;
+                    .nom {
+                        font-size: 18px;
+                        font-weight: bold;
                         color: $second-color;
-                    }
 
-                    h5 {
-                        margin: 0;
-                    }
-                }
-
-                .details {
-                    a {
-                        text-decoration: none;
-                        color: $first-color;
-                        font-size: 12px;
-                        font-weight: 600;
-
-                        &:hover {
+                        a {
+                            text-decoration: none;
                             color: $second-color;
+                        }
+
+                        h5 {
+                            margin: 0;
+                        }
+                    }
+
+                    .details {
+                        a {
+                            text-decoration: none;
+                            color: $first-color;
+                            font-size: 12px;
+                            font-weight: 600;
+
+                            &:hover {
+                                color: $second-color;
+                            }
                         }
                     }
                 }
@@ -71,15 +76,17 @@
         button {
             display: flex;
             align-items: center;
-            padding: 10px;
+            padding: 20px;
             background-color: #fff;
             color: $second-color;
-            border: 1px solid $bck-color;
+            border: 2px solid $btn-border;
             cursor: pointer;
-            .btn{
+
+            .btn {
                 font-size: 14px;
                 font-weight: 600;
             }
+
             &:hover {
                 color: $first-color;
             }
@@ -87,13 +94,14 @@
     }
 }
 
-@media screen and (max-width : 769px) {
+@media screen and (max-width : 820px) {
     #realisations {
         .realisations {
             .projets {
                 .realisation {
                     grid-column-end: span 6;
                     background-color: $bck-color;
+
                     .nom {
                         font-size: 18px;
                         font-weight: bold;

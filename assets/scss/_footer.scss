@@ -1,47 +1,241 @@
-#footer{
+.footer {
     background-color: $bck-color;
-    padding: 10px 0;
-    .footer{
+    padding: 100px 0;
+
+    .grid-footer {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         column-gap: 10px;
-        .contacts{
+
+        .contacts {
             grid-column-end: span 3;
-            .logo{
-                padding: 10px 0 20px 0;
+
+            .logo {
+                margin: 10px 0 20px 0;
             }
-            .contact{
+
+            .contact {
                 display: flex;
                 column-gap: 5px;
-                padding: 5px;
-            }
-            .mail{
-                display: flex;
-                column-gap: 5px;
-                padding: 5px;
-                a{
+                margin-bottom: 5px;
+
+                a {
                     text-decoration: none;
                     color: black;
                 }
             }
-            .location{
+
+            .mail {
                 display: flex;
                 column-gap: 5px;
-                padding: 5px;
-                a{
+                margin-bottom: 5px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+            .location {
+                display: flex;
+                column-gap: 5px;
+                margin-bottom: 5px;
+
+                a {
                     text-decoration: none;
                     color: black;
                 }
             }
         }
-        .links{
+
+        .links {
             grid-column-end: span 3;
+
+            .titre {
+                h5 {
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+
+            .content {
+                a {
+                    text-decoration: none;
+                    color: $footer-a-color;
+
+                    p {
+                        margin: 0 0 10px 0;
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
+                }
+            }
         }
-        .about{
-            grid-column-end: span 3;
+
+        .about {
+            grid-column-end: span 2;
+
+            .titre {
+                h5 {
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+
+            .content {
+                a {
+                    text-decoration: none;
+                    color: $footer-a-color;
+
+                    p {
+                        margin: 0 0 10px 0;
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
+                }
+            }
         }
-        .newsletter{
-            grid-column-end: span 3;
+
+        .newsletter {
+            grid-column-end: span 4;
+
+            .entete {
+                h5 {
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+
+            .paragraph {
+                h6 {
+                    margin: 0;
+                    font-size: 13px;
+                    font-weight: 400;
+                }
+            }
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                row-gap: 15px;
+                margin: 20px 0;
+
+                .input {
+
+                    display: flex;
+                    align-items: center;
+                    background-color: #fff;
+                    .mail{
+                        padding: 15px 10px 10px 15px;
+                    }
+                    input {
+                        padding: 15px 15px 15px 0;
+                        border: none;
+
+                        &::placeholder {
+                            color: $placeholder;
+                        }
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                }
+
+                button {
+                    padding: 20px 15px;
+                    background-color: $second-color;
+                    border: none;
+                    color: #fff;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $first-color;
+                        transition: .5s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+.autres{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: $footer-bck;
+    .licence{
+        h6{
+        font-size: 12px;
+        font-weight: 400;
+        color: $licence-footer;
+        margin: 0;
+        }
+    }
+    .socials{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+    .donnees{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        h6{
+            font-size: 12px;
+        font-weight: 400;
+        color: $licence-footer;
+        margin: 0;
+        }
+    }
+}
+@media screen and (max-width: 769px) {
+    .footer {
+        row-gap: 10px;
+
+        .grid-footer {
+            .contacts {
+                grid-column-end: span 6;
+            }
+
+            .links {
+                grid-column-end: span 6;
+            }
+
+            .about {
+                grid-column-end: span 5;
+            }
+
+            .newsletter {
+                grid-column-end: span 7;
+            }
+        }
+    }
+    .autres{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .footer {
+        row-gap: 10px;
+
+        .grid-footer {
+            .contacts {
+                grid-column-end: span 12;
+            }
+
+            .links {
+                grid-column-end: span 12;
+            }
+
+            .about {
+                grid-column-end: span 12;
+            }
+
+            .newsletter {
+                grid-column-end: span 12;
+            }
         }
     }
 }

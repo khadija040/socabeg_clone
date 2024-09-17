@@ -1,0 +1,194 @@
+#recherche-bien {
+    background: url('../images/background1.png');
+    background-attachment: fixed;
+    margin: 100px 0;
+
+    .container {
+        padding: 60px 0;
+
+        .textes {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+
+            h3 {
+                font-size: 36px;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            h6 {
+                font-size: 15px;
+                font-weight: 400;
+                color: $p2-color;
+                margin: 0;
+            }
+        }
+
+        .form {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+
+            .h6 {
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+                margin: 0;
+                padding: 20px 0;
+            }
+
+            form {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                padding: 20px;
+                column-gap: 30px;
+                background-color: #fff;
+
+                .type {
+                    grid-column-end: span 3;
+
+                    h6 {
+                        margin: 0;
+                        margin-bottom: 5px;
+                    }
+
+                    .select-prop {
+                        background-color: #fff;
+                        border: 2px solid $btn-border;
+                        padding: 15px;
+
+                        select {
+                            border: none;
+                            width: 100%;
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+
+                .budget {
+                    grid-column-end: span 3;
+
+                    h6 {
+                        margin: 0;
+                        margin-bottom: 5px;
+                    }
+
+                    .enter-sum {
+                        display: flex;
+                        align-items: center;
+                        background-color: #fff;
+                        padding: 15px;
+                        // width: 100%;
+                        border: 2px solid $btn-border;
+
+                        .input {
+                            flex: 1;
+
+                            input {
+                                border: none;
+                                width: 100%;
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                        }
+
+                        .devise {
+                            color: $second-color;
+
+                            h6 {
+                                margin: 0;
+
+                            }
+                        }
+                    }
+                }
+
+                .localite {
+                    grid-column-end: span 3;
+
+                    h6 {
+                        margin: 0;
+                        margin-bottom: 5px;
+                    }
+
+                    .select-loc {
+                        background-color: #fff;
+                        border: 2px solid $btn-border;
+                        padding: 15px;
+
+                        select {
+                            border: none;
+                            width: 100%;
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+
+                .btn {
+                    grid-column-end: span 3;
+                    display: flex;
+                    background-color: $first-color;
+                    margin-top: 20px;
+
+                    button {
+                        border: none;
+                        background-color: $first-color;
+                        color: #fff;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        padding: 15px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 769px) {
+    #recherche-bien {
+        .container {
+            .form {
+                form {
+                    row-gap: 20px;
+                    justify-content: center;
+                    column-gap: 0px;
+                    .type {
+                        grid-column-end: span 12;
+                    }
+
+                    .budget {
+                        grid-column-end: span 12;
+
+                        .input {
+                            flex: 1;
+                        }
+                    }
+
+                    .localite {
+                        grid-column-end: span 12;
+                    }
+
+                    .btn {
+                        grid-column-end: span 12;
+
+                        button {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

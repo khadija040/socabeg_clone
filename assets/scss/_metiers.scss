@@ -1,12 +1,12 @@
 .metiers-section {
     background-color: $bck-color;
-    padding: 50px 0;
+    padding: 100px 0;
 
     .entete {
         display: flex;
         align-items: center;
         column-gap: 5px;
-
+        margin-bottom: 30px;
         h4 {
             font-size: 24px;
             font-weight: 800;
@@ -21,7 +21,6 @@
         column-gap: 20px;
         .metiers {
             grid-column-end: span 3;
-            padding-top: 30px;
             .image{
                 img{
                     width: 100%;
