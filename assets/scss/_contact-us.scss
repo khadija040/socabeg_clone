@@ -1,0 +1,135 @@
+#contact {
+    background-color: $footer-bck;
+    padding: 100px 0;
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 10px;
+
+        .map {
+            grid-column-end: span 6;
+
+            .texte {
+                h4 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin: 0;
+                    padding: 20px 0;
+                }
+            }
+        }
+
+        .contact-us {
+            grid-column-end: span 6;
+
+            .texte {
+                h4 {
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin: 0;
+                    padding: 20px 0;
+                }
+            }
+
+            .formulaire {
+                form {
+                    display: flex;
+                    flex-direction: column;
+
+                    .input {
+                        h6 {
+                            font-size: 12px;
+                            font-weight: 600;
+                            padding: 18px 0;
+                        }
+
+                        input {
+                            width: 100%;
+                            border: none;
+                            padding: 10px;
+                            flex: 1;
+
+                            &:hover {
+                                border: 2px solid $second-color;
+                                color: $second-color;
+                            }
+
+                            &:focus {
+                                border: 2px solid $second-color;
+                                color: $second-color;
+                            }
+                        }
+
+                        textarea {
+                            width: 100%;
+                            border: none;
+                            height: 100px;
+                            padding: 10px;
+
+                            &:hover {
+                                border: 2px solid $second-color;
+                                color: $second-color;
+                            }
+
+                            &:focus {
+                                border: 2px solid $second-color;
+                                color: $second-color;
+                            }
+                        }
+                    }
+
+                    button {
+                        width: 100%;
+                        margin-top: 20px;
+                        padding: 10px 0;
+                        border: none;
+                        background-color: $second-color;
+                        color: #fff;
+                        cursor: pointer;
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 769px) {
+    #contact {
+        .content {
+            .map {
+                grid-column-end: span 12;
+
+                .carte {
+                    text-align: center;
+
+                    img {
+                        width: 75%;
+                    }
+                }
+            }
+
+            .contact-us {
+                grid-column-end: span 12;
+
+                .formulaire {
+                    form {
+                        .input {
+                            input {
+                                width: 90%;
+                            }
+                            textarea{
+                                width: 90%;
+                            }
+                        }
+                        button{
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
