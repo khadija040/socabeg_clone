@@ -1,0 +1,35 @@
+#options{
+    background-color: $footer-bck;
+    padding-top: 50px;
+    .options{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        button{
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #fff;
+            color: $second-color;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .btn1{
+            background-color: $second-color;
+            color: #fff;
+        }
+    }
+}
+@media screen and (max-width : 475px) {
+    #options{
+        .options{
+            gap: 5px;
+            button{
+                padding: 0;
+            }
+            .btn1{
+                padding: 10px;
+            }
+        }
+    }
+}

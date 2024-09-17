@@ -2,4 +2,11 @@
 @import '../partials/grid';
 @import "../partials/colors";
 @import './header';
+@import'./options';
 @import './exemples';
+@import'./footer';
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
